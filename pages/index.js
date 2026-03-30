@@ -1,5 +1,5 @@
 /********************************************************************************
-*  WEB422 – Assignment 02
+*  WEB422 – Assignment 03
 *
 *  I declare that this assignment is my own work in accordance with Seneca's
 *  Academic Integrity Policy:
@@ -10,7 +10,7 @@
 *  Student ID: 168362234
 *  Date: 15/03/2025
 *
-*  Published URL: ___________________________
+* Vercel App (Deployed) Link: https://my-app-kappa-one-28.vercel.app/
 *
 ********************************************************************************/
 

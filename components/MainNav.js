@@ -2,13 +2,19 @@ import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { readToken, removeToken } from "@/lib/authenticate";
+import { useState, useEffect } from "react";
 
 export default function MainNav() {
   const router = useRouter();
-  const token = readToken();
+  const [token, setToken] = useState(null);
+
+  useEffect(() => {
+    setToken(readToken());
+  }, [router.pathname]);
 
   function logout() {
     removeToken();
+    setToken(null);
     router.push("/login");
   }
 
@@ -27,7 +33,6 @@ export default function MainNav() {
             </Nav.Link>
           </Nav>
 
-          {/* Shown only when logged in */}
           {token && (
             <Nav>
               <NavDropdown title={token.userName} id="basic-nav-dropdown">
@@ -41,7 +46,6 @@ export default function MainNav() {
             </Nav>
           )}
 
-          {/* Shown only when logged out */}
           {!token && (
             <Nav>
               <Nav.Link as={Link} href="/register">
