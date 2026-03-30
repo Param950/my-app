@@ -14,7 +14,7 @@ export default function Work() {
   );
 
   if (error) return <Error statusCode={404} />;
-  if (!data) return null;
+  if (!data) return <p>Loading...</p>;
 
   return (
     <>
@@ -22,5 +22,4 @@ export default function Work() {
       <BookDetails book={data} workId={workId} />
     </>
   );
-
 }
