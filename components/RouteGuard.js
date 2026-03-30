@@ -5,7 +5,7 @@ import { favouritesAtom } from "@/store";
 import { isAuthenticated } from "@/lib/authenticate";
 import { getFavourites } from "@/lib/userData";
 
-const PUBLIC_PATHS = ["/login", "/register", "/about"];
+const PUBLIC_PATHS = ["/login", "/register", "/about", "/_error"];
 
 export default function RouteGuard({ children }) {
   const router = useRouter();
