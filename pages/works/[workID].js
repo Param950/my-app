@@ -14,7 +14,7 @@ export default function Work() {
   );
 
   if (error) return <Error statusCode={404} />;
-  if (!data) return <p>Loading...</p>;
+  if (!data) return null;
 
   return (
     <>
